@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-06 15:45:42
+ * @LastEditTime: 2019-08-06 15:45:42
+ * @LastEditors: your name
+ -->
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="playmood's Blog">
+
+
+    <meta name="keywords" content="playmood's Blog">
+
+
+<title>算法实验复习 | playmood&#39;s Blog</title>
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<!--iconfonts-->
+<link rel="stylesheet" href="/fonts/iconfonts/iconfont.css">
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    <script async src="/js/busuanzi.pure.mini.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+    <script src="/css/jquery.fancybox.min.js"></script>
+
+
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="header-logo"><a href="/">playmood&#39;s blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <a href="/friends/"><span class="icon iconfont icon-team"></span></a>
+                <a href="/books/index.html"><span class="icon iconfont icon-book"></span></a>
+                <a href="/search/"><span class="icon iconfont icon-search"></span></a>
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">playmood&#39;s blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+    <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()"><span class="iconfont icon-expand"></span>&nbsp;</a> 
+        <a onclick="go_top()"><span class="icon iconfont icon-arrowup"></span>&nbsp;</a> 
+        <a onclick="go_bottom()"><span class="icon iconfont icon-arrowdown"></span>&nbsp;</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "<span class=\"iconfont icon-collapse\"></span>&nbsp; "
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "<span class=\"iconfont icon-expand\"></span>&nbsp; "
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">算法实验复习</h1>
+            <br />
+            
+            <div class="post-meta">
+                
+                <span class="iconfont icon-user"></span> <a itemprop="author" rel="author" href="/"
+                    style="font-weight: bold;">playmood</a>
+                &nbsp;
+
+                
+                <span class="post-time">
+                    <span class="iconfont icon-time-circle"> October 20, 2019
+                    </span>
+                    &nbsp;
+
+                    
+                    <span class="post-category">
+                        <span class="iconfont icon-folder-open">
+                            
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">课程学习</a>
+                            
+                        </span>&nbsp;
+                        
+                        <span id="post-view"><span class="icon iconfont icon-eye"></span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+            </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>i wanna try.</p>
+<a id="more"></a>
+<h1 id="极冰防御–盾山-选自2018算法实验考试"><a href="#极冰防御–盾山-选自2018算法实验考试" class="headerlink" title="极冰防御–盾山(选自2018算法实验考试)"></a>极冰防御–盾山(选自2018算法实验考试)</h1><hr>
+![img](/img/pic1.png)
+
+
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>盾山是王者峡谷里的辅助，一夫当关、万夫莫开，一个好的辅助往往可以给团队带来极大帮助。<br><br>盾山的游戏中的一个技能为不动如山：手握一块由石头组成的巨盾，张开巨盾砸向地面，将敌人推开，并持续一段时间。<br><br>假设盾山最多只能承受C重量的盾牌，而现在有N个小石头，每个石头i的重量为Wi，防御值为Pi。那么，呆萌的盾山想知道，他从N个小石头中挑选M个（M&lt;=N）组成他可承受盾牌，最大的防御值是多少?</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>多组测试用例。<br>第一行输入包含一个整数T（1&lt;=T&lt;=10），代表测试用例个数。<br>接下来有T组测试用例。每组测试用例第一行为盾山承受盾牌的最大重量C(C&lt;10000)和小石头的个数N(N&lt;1000)。接下来的N行分别为小石头的重量Wi(1&lt;=Wi&lt;=100)和防御值Pi(1&lt;=Pi&lt;=3000000)。</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>每组测试用例对应一行输出，每行输出一个整数ans，代表可承受盾牌的最大防御值。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">10</span> <span class="number">5</span></span><br><span class="line"><span class="number">2</span> <span class="number">6</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span></span><br><span class="line"><span class="number">6</span> <span class="number">5</span></span><br><span class="line"><span class="number">5</span> <span class="number">4</span></span><br><span class="line"><span class="number">4</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>结果可能超过int范围，请使用long long型变量</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>同dp0-1背包</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll dp[<span class="number">1003</span>][<span class="number">10003</span>];</span><br><span class="line">ll w[<span class="number">1003</span>];</span><br><span class="line">ll p[<span class="number">1003</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		ll c;</span><br><span class="line">		<span class="keyword">int</span> n;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;c&gt;&gt;n;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;p[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> jMAX = <span class="built_in">min</span>(c, w[n] - <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= jMAX; j++)</span><br><span class="line">			dp[n][j] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = w[n]; j &lt;= c; j++)</span><br><span class="line">			dp[n][j] = p[n];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> jMAX = <span class="built_in">min</span>(c, w[i] - <span class="number">1</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= jMAX; j++)</span><br><span class="line">				dp[i][j] = dp[i+<span class="number">1</span>][j];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i]; j &lt;= c; j++)</span><br><span class="line">				dp[i][j] = <span class="built_in">max</span>(dp[i+<span class="number">1</span>][j], dp[i+<span class="number">1</span>][j-w[i]] + p[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;dp[<span class="number">1</span>][c]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="节食的限制"><a href="#节食的限制" class="headerlink" title="节食的限制"></a>节食的限制</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>Bessie像她的诸多姊妹一样，因为从Farmer John的草地吃了太多美味的草而长出了太多的赘肉。所以FJ将她置于一个及其严格的节食计划之中。她每天不能吃多过H(5&lt;=H&lt;=45000)公斤的干草。Bessie只能吃一整捆干草；当她开始吃一捆干草的之后就再也停不下来了。她有一个完整的N(1&lt;=n&lt;=50)捆可以给她当作晚餐的干草的清单。她自然想要尽量吃到更多的干草。很自然地，每捆干草只能被吃一次（即使在列表中相同的重量可能出现2次，但是这表示的是两捆干草，其中每捆干草最多只能被吃掉一次）。给定一个列表表示每捆干草的重量Si(1&lt;=Si&lt;=H) ,求Bessie不超过节食的限制的前提下可以吃掉多少干草（注意一旦她开始吃一捆干草就会把那一捆干草全部吃完）。</p>
+<h2 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h2><p>第一行：两个由空格隔开的整数：H和N，第2到N+1行：第i+1行是一个单独的整数，表示第i捆干草的重量Si。</p>
+<h2 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h2><p>一个单独的整数表示Bessie在限制范围内最多可以吃多少公斤的干草。</p>
+<h2 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">56</span> <span class="number">4</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="number">19</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">21</span></span><br></pre></td></tr></table></figure>
+<h2 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">56</span></span><br></pre></td></tr></table></figure>
+<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>依旧dp，解法类似于0-1背包，只不过重量和价值一样而已，这次使用的是从第一个物品开始装</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">53</span>][<span class="number">45003</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> w[<span class="number">53</span>];</span><br><span class="line">	<span class="keyword">int</span> h, n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;h&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n+<span class="number">1</span>; i++)</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;w[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= h; i++)</span><br><span class="line">		dp[<span class="number">0</span>][i] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">		dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> jMAX = <span class="built_in">min</span>(w[i]<span class="number">-1</span>, h);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= jMAX; j++)</span><br><span class="line">			dp[i][j] = dp[i<span class="number">-1</span>][j];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i]; j &lt;= h; j++)</span><br><span class="line">				dp[i][j] = <span class="built_in">max</span>(dp[i<span class="number">-1</span>][j], dp[i<span class="number">-1</span>][j-w[i]] + w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;dp[n][h];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="法师康的工人"><a href="#法师康的工人" class="headerlink" title="法师康的工人"></a>法师康的工人</h1><h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>三个法师康的工人每天早上6点到工厂开始到三条产品生产线上组装桔子手机。第一个工人在200时刻开始（从6点开始计时，以秒作为单位）在生产线上开始生产，一直到1000时刻。第二个工人，在700时刻开始，在1100时刻结束。第三个工人从1500时刻工作到2100时刻。期间最长至少有一个工人在生产线上工作的连续时间为900秒（从200时刻到1100时刻），而最长的无人生产的连续时间（从生产开始到生产结束）为400时刻（1100时刻到1500时刻）。</p>
+<p>你的任务是用一个程序衡量N个工人在N条产品线上的工作时间列表（1≤N≤5000，以秒为单位）。</p>
+<p>·最长的至少有一个工人在工作的时间段</p>
+<p>·最长的无人工作的时间段（从有人工作开始计）</p>
+<h2 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h2><p>输入第1行为一个整数N，第2-N+1行每行包括两个均小于1000000的非负整数数据，表示其中一个工人的生产开始时间与结束时间。</p>
+<h2 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h2><p>输出为一行，用空格分隔开两个我们所求的数。</p>
+<h2 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">200</span> <span class="number">1000</span></span><br><span class="line"><span class="number">700</span> <span class="number">1100</span></span><br><span class="line"><span class="number">1500</span> <span class="number">2100</span></span><br></pre></td></tr></table></figure>
+<h2 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">900</span> <span class="number">400</span></span><br></pre></td></tr></table></figure>
+<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>greedy<br>定义结构体<code>worker</code>，该结构体的两个属性<code>l</code>和<code>r</code>分别代表着每个工人的开始时间和结束时间<br>再定义布尔函数<code>cmp</code>为我们的<code>sort</code>函数定义比较条件</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">worker</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> r, l;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(worker a, worker b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a.l &lt; b.l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>记最长的至少有一个工人在工作的时间段为<code>ans1</code><br>最长的无人工作的时间段（从有人工作开始计）为<code>ans2</code><br>先按照每一个工人工作的截止时间从小到大排序<br>以第一个工人的结束时间减开始时间<code>worker[1].r - worker[1].l</code>作为<code>ans1</code>的初始值<br><code>ans2</code>初始值为<code>0</code>即可<br>然后从第二个工人开始查询，若其开始时间<code>l</code>小于前一个工人的结束时间<code>r</code>，则依次对<code>worker[1].r</code>和<code>ans1</code>进行更新<br>查到第<code>i</code>个工人时，若其开始时间<code>l</code>大于前一个工人的结束时间<code>r</code>，则说明第<code>i</code>个工人的工作区间不与前面我们合并的大区间相交，因此我们要构造下一个大的合并区间，对<code>l</code>和<code>ans2</code>进行更新</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">worker</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> l, r;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(worker a, worker b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a.l &lt; b.l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	worker w[n+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;w[i].l&gt;&gt;w[i].r;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(w+<span class="number">1</span>, w+<span class="number">1</span>+n, cmp);</span><br><span class="line">	<span class="keyword">int</span> ans1 = w[<span class="number">1</span>].r - w[<span class="number">1</span>].l;</span><br><span class="line">	<span class="keyword">int</span> ans2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(w[j].r &gt;= w[i].l)</span><br><span class="line">		&#123;</span><br><span class="line">			w[j].r = w[i].r;</span><br><span class="line">			ans1 = <span class="built_in">max</span>(ans1, w[j].r - w[j].l);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			ans2+=w[i].l - w[j].r;</span><br><span class="line">			j = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans1&lt;&lt;<span class="string">' '</span>&lt;&lt;ans2;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="部分和问题"><a href="#部分和问题" class="headerlink" title="部分和问题"></a>部分和问题</h1><h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定n个整数，判断是否可以从中选择若干数字，使得他们的和恰好为k。</p>
+<h2 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h2><p>多组测试用例。</p>
+<p>对于每组测试用例，第一行一个正整数n，第二行n个整数，第三行一个整数k。</p>
+<p>1≤N≤20，输入整数及k均小于1e8。</p>
+<h2 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h2><p>若可以使得和为k，输出”Yes”,否则”No”。</p>
+<h2 id="样例输入-3"><a href="#样例输入-3" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">7</span></span><br><span class="line"><span class="number">13</span></span><br></pre></td></tr></table></figure>
+<h2 id="样例输出-3"><a href="#样例输出-3" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
+<h2 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h2><p>dfs</p>
+<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">ll sum = <span class="number">0</span>, k;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> i, ll sum, ll *p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(sum == k)	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(i == n)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> dfs(i+<span class="number">1</span>, sum+p[i], p) || dfs(i+<span class="number">1</span>, sum, p);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	ll p[n];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;p[i]);</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;k;</span><br><span class="line">	<span class="keyword">if</span>(dfs(<span class="number">0</span>, sum, p))	<span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+        <section class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>playmood</span>
+            </p>
+            
+            
+            <p class="copyright-item">
+                <span>Permalink:</span>
+                <span><a href="https://playmood.xyz/2019/10/20/%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0/">https://playmood.xyz/2019/10/20/%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C%E5%A4%8D%E4%B9%A0/</a></span>
+            </p>
+            
+            
+            <p class="copyright-item">
+                <span>License:</span>
+                <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+            </p>
+            
+            
+
+        </section>
+        
+        <section class="post-tags">
+            <div>
+                <span class="iconfont icon-tags"></span>
+                <span class="tag">
+                    
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E8%AF%BE/"># 算法课</a>
+                    
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">
+                    << <span class="icon iconfont icon-rollback"></span>
+                </a>
+                <span>· </span>
+                <a href="/"><span class="icon iconfont icon-home"></span> >> </a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            <a class="prev" rel="prev" href="/2019/10/24/%E6%9F%90%E5%93%8E%E5%93%9F%E7%9A%84%E5%88%B7%E9%A2%98/">某哎哟的刷题</a>
+            
+            
+            <a class="next" rel="next" href="/2019/10/20/%E6%9F%90%E5%93%8E%E5%93%9F%E7%9A%84%E7%AC%94%E8%AE%B0/">某哎哟的笔记</a>
+            
+        </section>
+        
+        <section class="post-gittalk">
+            <link rel="stylesheet" href="/css/gitalk.css">
+            <div id="gitalk-container"></div>
+            <script src="/js/gitalk.min.js"></script>
+            <script type="text/javascript">
+                var gitalk = new Gitalk({
+                    clientID: '',
+                    clientSecret: '',
+                    id: decodeURI(location.pathname),
+                    repo: 'playmood.github.io',
+                    owner: 'playmood',
+                    admin: 'playmood'
+                })
+                gitalk.render('gitalk-container')
+            </script>
+        </section>
+        <br/>
+    </article>
+</div>
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 2019 playmood </span>
+    </div>
+</footer>
+
+    <script src="/js/warp.js"></script>
+
+
+
+    </div>
+</body>
+</html>
