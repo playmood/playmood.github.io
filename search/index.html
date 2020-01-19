@@ -19,7 +19,7 @@
     <meta name="keywords" content="playmood's Blog">
 
 
-<title>Archives | playmood&#39;s Blog</title>
+<title>playmood&#39;s Blog</title>
 
 
 
@@ -37,6 +37,8 @@
     
 
 
+    <link href="/css/flexboxgrid.min.css" rel="stylesheet">
+
 
 
 
@@ -47,6 +49,9 @@
     <script src="/js/tocbot.min.js"></script>
     
 
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/search.js"></script>
 
 
 
@@ -125,22 +130,28 @@
     }
 </script>
         <div class="main">
-            <div class="post-wrap archive">
-    
-    
-        
-
-        
-            <h3>2020</h3>
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2020/01/19/hello-world/">Hello World</a>
-            <span class="archive-item-date">January 19, 2020</span>
-        </article>
-    
-    
+            <div class="container">
+    <div class="post-wrap tags">
+        <h2 class="post-title">-&nbsp;Search&nbsp;-</h2>
+        <section id="search">
+            <form>
+                <div class="row">
+                    <div class="col-xs-8 col-md-4">
+                        <input type="text" class="search-input" id="search-input" placeholder="search...">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="col-xs-4 col-md-2">
+                        <button type="reset" class="reset-button" onclick="resetSearch()">reset</button>
+                    </div>
+                </div>
+            </form>
+            <div id="search-result"></div>
+            <p class='no-result'>No results found</p>
+        </section>
+    </div>
 </div>
+
+<script src="https://3nd.xyz/js/search.js"></script>
         </div>
         <footer id="footer" class="footer">
     <div class="copyright">
