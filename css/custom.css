@@ -1,0 +1,43 @@
+.gutter pre {
+  margin: 0 4px !important;
+}
+.code pre {
+  margin: 0 !important;
+  font-size: 14px !important;
+}
+.highlight {
+  color: #566270 !important;
+  line-height: 1.75em !important;
+  border-radius: 3px !important;
+  border: 1.5px dotted #e8e8e8;
+}
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+::-webkit-scrollbar-thumb {
+/*滚动条里面小方块*/
+  border-radius: 5px !important;
+  -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.2) !important;
+  background: rgba(0,0,0,0.1) !important;
+}
+::-webkit-scrollbar-track {
+/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.2) !important;
+  border-radius: 0 !important;
+  background: rgba(0,0,0,0) !important;
+}
+.header-logo a {
+  font-weight: 600;
+  padding: 9px 12px 6px;
+  background: #29292a;
+  color: #fff;
+  -webkit-transition: background 0.6s ease-out;
+  -moz-transition: background 0.6s ease-out;
+  -ms-transition: background 0.6s ease-out;
+  -o-transition: background 0.6s ease-out;
+  transition: background 0.6s ease-out;
+}
+.dark-theme .highlight {
+  background: #f8f5ec;
+}
